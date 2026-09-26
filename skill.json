@@ -1,0 +1,45 @@
+{
+  "name": "genpark-spatial-relationship-grounding-evaluator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Geometric spatial relationship grounding evaluator verifying relative positional assertions between objects and UI controls.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "vision-agent",
+  "tags": [
+    "spatial-grounding",
+    "geometry-evaluator",
+    "vision-agent",
+    "robotics-reasoning",
+    "computer-use"
+  ],
+  "inputs": {
+    "subject_name": {
+      "type": "string",
+      "default": "Submit Button"
+    },
+    "reference_name": {
+      "type": "string",
+      "default": "Password Input Field"
+    },
+    "claimed_relation": {
+      "type": "string",
+      "default": "BELOW"
+    }
+  },
+  "outputs": {
+    "evaluation_id": {
+      "type": "string"
+    },
+    "claim_verified_true": {
+      "type": "boolean"
+    },
+    "grounding_confidence": {
+      "type": "number"
+    },
+    "spatial_verdict": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
